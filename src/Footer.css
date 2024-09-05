@@ -1,0 +1,9 @@
+.Footer p {
+  text-align: center;
+  font-size: 12px;
+}
+.Footer a {
+  text-decoration: none;
+  color: #38d3a0;
+  font-weight: 600;
+}

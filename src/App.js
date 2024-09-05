@@ -11,6 +11,7 @@ export default function App() {
         <img src={Designer} className="App-logo" alt="logo" />
         <span className="App-text">Muri</span>
       </header>
+      <Footer />
     </div>
   );
 }
