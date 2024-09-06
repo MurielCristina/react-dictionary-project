@@ -1,0 +1,19 @@
+.Results {
+  text-align: start;
+  margin: 20px;
+  margin-top: 20px;
+}
+.Phonetic {
+  margin-bottom: 20px;
+}
+.Phonetic h2 {
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.Phonetic em {
+  color: #a60269;
+}
+.Meaning em {
+  color: gray;
+}
