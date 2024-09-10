@@ -16,3 +16,14 @@
   color: rgb(69, 68, 68);
   width: 90%;
 }
+
+@media (max-width: 768px) {
+  .Dictionary {
+    padding: 15px;
+    max-width: 90%;
+    margin: 30px auto;
+  }
+  .Dictionary h1 {
+    text-align: start;
+  }
+}

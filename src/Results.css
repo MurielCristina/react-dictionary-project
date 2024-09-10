@@ -1,7 +1,9 @@
 .Results {
   text-align: start;
   margin: 20px;
-  margin-top: 20px;
+}
+.Results li {
+  margin-bottom: 10px;
 }
 .Phonetic {
   margin-bottom: 20px;
@@ -14,6 +16,35 @@
 .Phonetic em {
   color: #a60269;
 }
-.Meaning em {
+.Example {
   color: gray;
+  font-style: italic;
+  font-size: 13px;
+  margin: 10px 0;
+}
+.Synonyms span {
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.Synonyms ul {
+  padding: 0;
+  margin-bottom: 10px;
+}
+.Synonyms li {
+  list-style: none;
+  font-size: 13px;
+  color: #a60269;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .Results {
+    margin: 10px;
+  }
+  .Phonetic {
+    margin-bottom: 15px;
+  }
+  .Phonetic h2 {
+    font-size: 30px;
+  }
 }
