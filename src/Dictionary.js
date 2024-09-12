@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 import "./Dictionary.css";
 
@@ -25,9 +26,13 @@ export default function Dictionary() {
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
 
-    let imageApiKey = "73050fa355794447f81ab5349190dotd";
-    let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyWord}&key=${imageApiKey}}`;
-    axios.get(imageApiUrl).then(handleImageResponse);
+    let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyWord}&key=${apiKey}}`;
+    let tokenStr = { apiKey };
+    axios
+      .get(imageApiUrl, {
+        headers: { Authorization: `Bearer ${tokenStr}` },
+      })
+      .then(handleImageResponse);
   }
 
   function handleKeyWordChange(event) {
@@ -45,6 +50,7 @@ export default function Dictionary() {
         />
       </form>
       <Results results={results} />
+      <Photos photos={images} />
     </div>
   );
 }
