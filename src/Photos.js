@@ -12,7 +12,7 @@ export default function Photos(props) {
                   <img
                     src={photo.src.original}
                     alt={photo.alt}
-                    className="img-fluid rounded mb-2 d-block"
+                    className="img-fluid rounded my-1 d-block"
                   />
                 </a>
               </div>
