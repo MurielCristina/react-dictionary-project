@@ -8,9 +8,14 @@ import "./Dictionary.css";
 export default function Dictionary() {
   const [keyWord, setKeyWord] = useState("");
   const [results, setResults] = useState(null);
+  const [images, setImages] = useState(null);
 
   function handleResponse(response) {
     setResults(response.data);
+  }
+  function handleImageResponse(response) {
+    console.log(response);
+    setImages(response.data);
   }
 
   function search(event) {
@@ -19,6 +24,10 @@ export default function Dictionary() {
     let apiKey = "73050fa355794447f81ab5349190dotd";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
+
+    let imageApiKey = "73050fa355794447f81ab5349190dotd";
+    let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyWord}&key=${imageApiKey}}`;
+    axios.get(imageApiUrl).then(handleImageResponse);
   }
 
   function handleKeyWordChange(event) {
